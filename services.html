@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>stack 3</title>
+    <link rel="Icon" href="img/logo2.png" width="100%" height="100%" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style/custome.css" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg menu_custom" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="#"
+          ><img
+            src="img/logo.png"
+            alt="Logo"
+            width="100%"
+            height="100%"
+            class="me-2"
+        /></a>
+        <button
+          class="navbar-toggler text-light"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                id="ma_colors"
+              >
+                Pages
+              </a>
+              <ul class="dropdown-menu">
+                <li><a  href="about.html" class="dropdown-item">About us</a></li>
+                <li><a  href="portfolio.html" class="dropdown-item">Portfolio</a></li>
+                <li><a class="dropdown-item" href="portfolio-single.html">Portfolio single</a></li>
+                <li><a class="dropdown-item" href="#">submenu</a></li>
+                <li><a class="dropdown-item" href="services.html">Services</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+          <div class="auth-buttons d-flex px-3">
+            <button type="button" id="login" class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#signInModal">
+              LOG IN
+            </button>
+            <button type="button" class="btn btn-outline-custom"data-bs-toggle="modal" data-bs-target="#signUPModal">
+              SIGN UP
+            </button>
+
+          </div>
+        </div>
+      </div>
+    </nav>
+
+<!-- Sign In Modal -->
+  <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-image">
+          <img src="img/modal_bg.jpg" alt="" width="100%" height="100%">
+        </div>
+        <div class="modal-body">
+          <form  novalidate>
+            <div class="mb-3">
+              <input type="email" class="form-control" id="email" placeholder="Email"  aria-describedby="emailFeedback">
+              <div id="emailFeedback" class="invalid-feedback">
+                Please enter a valid email address.
+              </div>
+            </div>
+            <div class="mb-3">
+              <input type="password" class="form-control" id="password" placeholder="Password" required minlength="6" aria-describedby="passwordFeedback">
+              <div id="passwordFeedback" class="invalid-feedback">
+                Password must be at least 6 characters long.
+              </div>
+            </div>
+            <div class="mb-3 d-flex justify-content-between align-items-center">
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" >
+                <label class="form-check-label" for="rememberMe">Remember Me</label>
+              </div>
+              <a href="#" class="forgot-password">Forgot Password?</a>
+            </div>
+            <button type="submit" class="btn btn-signin mb-3">SIGN IN</button>
+            <div class="or-divider">OR</div>
+            <button type="button" class="btn btn-social btn-facebook mb-2">CONNECT WITH FACEBOOK</button>
+            <button type="button" class="btn btn-social btn-google mb-2">CONNECT WITH GOOGLE</button>
+            <button type="button" class="btn btn-social btn-twitter">CONNECT WITH TWITTER</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-image">
+          <img src="img/modal_bg.jpg" alt="" width="100%" height="100%">
+        </div>
+        <div class="modal-body">
+          <form  novalidate>
+            <div class="mb-3">
+              <input type="email" class="form-control"  placeholder="Email"aria-describedby="emailFeedback">
+              <div id="emailFeedback" class="invalid-feedback">
+                Please enter a valid email address.
+              </div>
+            </div>
+            <div class="mb-3">
+              <input type="password" class="form-control"placeholder="Password" required minlength="6" aria-describedby="passwordFeedback">
+              <div id="passwordFeedback" class="invalid-feedback">
+                Password must be at least 6 characters long.
+              </div>
+            </div>
+            <div class="mb-3 d-flex justify-content-between align-items-center">
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input">
+                <label class="form-check-label" for="rememberMe">Remember Me</label>
+              </div>
+              <a href="#" class="forgot-password">Forgot Password?</a>
+            </div>
+            <button type="submit" class="btn btn-signin mb-3">LOG IN</button>
+            <div class="or-divider">OR</div>
+            <button type="button" class="btn btn-social btn-facebook mb-2">CONNECT WITH FACEBOOK</button>
+            <button type="button" class="btn btn-social btn-google mb-2">CONNECT WITH GOOGLE</button>
+            <button type="button" class="btn btn-social btn-twitter">CONNECT WITH TWITTER</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Sign Up Modal -->
+   <div class="modal fade" id="signUPModal" tabindex="-1" aria-labelledby="signUPModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-image">
+          <img src="img/modal_bg.jpg" alt="" width="100%" height="100%">
+        </div>
+        <div class="modal-body">
+          <form id="signInForm" novalidate>
+            <div class="mb-3">
+              <input type="email" class="form-control"placeholder="Email"  aria-describedby="emailFeedback">
+              <div id="emailFeedback" class="invalid-feedback">
+                Please enter a valid email address.
+              </div>
+            </div>
+            <div class="mb-3">
+              <input type="password" class="form-control" placeholder="Password" required minlength="6" aria-describedby="passwordFeedback">
+              <div id="passwordFeedback" class="invalid-feedback">
+                Password must be at least 6 characters long.
+              </div>
+            </div>
+            <div class="mb-3 d-flex justify-content-between align-items-center">
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" >
+                <label class="form-check-label" for="rememberMe">Remember Me</label>
+              </div>
+              <a href="#" class="forgot-password">Forgot Password?</a>
+            </div>
+            <button type="submit" class="btn btn-signin mb-3">SIGN UP</button>
+            <div class="or-divider">OR</div>
+            <button type="button" class="btn btn-social btn-facebook mb-2">CONNECT WITH FACEBOOK</button>
+            <button type="button" class="btn btn-social btn-google mb-2">CONNECT WITH GOOGLE</button>
+            <button type="button" class="btn btn-social btn-twitter">CONNECT WITH TWITTER</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+   <!-- carousel -->
+    <div id="carouselExampleFade" class="carousel slide carousel-fade">
+        <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="img/slider_3.jpg" style="filter: brightness(0.5);" class="d-block w-100" alt="...">
+            <div class="carousel-caption  ">
+                <h1 data-aos="fade-down">Services</h1>
+                <p data-aos="fade-up">Our specialty, we love to work with you</p>
+            </div>
+            </div>    
+  </div>
+  </div>
+  <!-- services -->
+   <div class="my_space3">
+   </div>
+    <section
+      class=" probootstrap-bg-white probootstrap-zindex-above-showcase"
+    >
+      <div class="container ">
+        
+        <div class="row probootstrap-gutter100">
+          <div
+            class="col-md-4 probootstrap-animate"
+           data-aos="zoom-out-right"
+          >
+            <div class="service hover_service text-center">
+              <div class="icon"><i class="fa-solid fa-mobile-screen-button"></i></i></div>
+              <div class="text">
+                <h3>Responsive Design</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                  provident qui tempore natus quos quibusdam soluta at.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-md-4 probootstrap-animate"
+          data-aos="zoom-out-left"
+          >
+            <div class="service hover_service text-center">
+              <div class="icon"><i class="fa-solid fa-person-chalkboard"></i></i></div>
+              <div class="text">
+                <h3>Business Solutions</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                  provident qui tempore natus quos quibusdam soluta at.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-md-4 probootstrap-animate"
+            data-aos="zoom-out-right"
+          >
+            <div class="service hover_service text-center">
+              <div class="icon "><i class="fa-solid fa-code-branch"></i></div>
+              <div class="text">
+                <h3>Brand Identity</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                  provident qui tempore natus quos quibusdam soluta at.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-md-4 probootstrap-animate"
+           data-aos="zoom-out-left"
+          >
+            <div class="service hover_service text-center">
+              <div class="icon "><i class="fa-solid fa-lightbulb"></i></div>
+              <div class="text">
+                <h3>Creative Ideas</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                  provident qui tempore natus quos quibusdam soluta at.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-md-4 probootstrap-animate"
+           data-aos="zoom-out-right"
+          >
+            <div class="service hover_service text-center">
+              <div class="icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+              <div class="text">
+                <h3>Search  Friendly</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                  provident qui tempore natus quos quibusdam soluta at.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-md-4 probootstrap-animate"
+             data-aos="zoom-out-left"
+          >
+            <div class="service hover_service text-center">
+              <div class="icon "><i class="fa-solid fa-newspaper"></i></div>
+              <div class="text">
+                <h3>Easy Customization</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                  provident qui tempore natus quos quibusdam soluta at.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div> 
+      </div>
+    <div class="my_space3">
+   </div>
+    </section>
+  
+    <!-- Testimonials Section -->
+  <section class=" probootstrap-border-top probootstrap-bg-white">
+    <div class="container">
+      <div class="flex justify-center">
+        <div class="text-center section-heading probootstrap-animate" data-aos="fade-right">
+          <h2 class="text-3xl  mb-4">Testimonial</h2>
+        </div>
+      </div>
+      <div class="owl-carousel owl-carousel2-fullwidth testimonial-carousel">
+        <div class="item">
+          <div class="probootstrap-testimony-wrap text-center">
+            <figure>
+              <img src="img/person_1.jpg" data-aos="fade-up" alt="Person 1">
+            </figure>
+            <blockquote class="quote" data-aos="fade-up">“Design must be functional and functionality must be translated into visual aesthetics, without any reliance on gimmicks that have to be explained.” <cite class="author">— Ferdinand A. Porsche <br> <span>Design Lead at AirBNB</span></cite></blockquote>
+          </div>
+        </div>
+        <div class="item" data-aos="fade-up">
+          <div class="probootstrap-testimony-wrap text-center">
+            <figure>
+              <img src="img/person_2.jpg" alt="Person 2">
+            </figure>
+            <blockquote class="quote">“Creativity is just connecting things. When you ask creative people how they did something, they feel a little guilty because they didn’t really do it, they just saw something. It seemed obvious to them after a while.” <cite class="author">— Steve Jobs <br> <span>Co-Founder Square</span></cite></blockquote>
+          </div>
+        </div>
+        <div class="item" data-aos="fade-up">
+          <div class="probootstrap-testimony-wrap text-center">
+            <figure>
+              <img src="img/person_3.jpg" alt="Person 2">
+            </figure>
+            <blockquote class="quote">“Creativity is just connecting things. When you ask creative people how they did something, they feel a little guilty because they didn’t really do it, they just saw something. It seemed obvious to them after a while.” <cite class="author">— Steve Jobs <br> <span>Co-Founder Square</span></cite></blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="my_space">
+   </div>
+  </section>
+    <!-- Contact -->
+  <div class="contact-bar ">
+        We'd like to help and talk with you
+        <a href="contact.html" class="btn ">CONTACT US</a>
+    </div>
+  <!-- Footer -->
+  <footer class="probootstrap-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="probootstrap-footer-widget">
+                        <h3>Paragraph</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto provident qui tempore natus quos quibusdam soluta at.</p>
+                        <ul class="probootstrap-footer-social">
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+                            <li><a href="#"><i class="fa-solid fa-drum"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="probootstrap-footer-widget">
+                                <h3>Links</h3>
+                                <ul>
+                                    <li><a href="#">Knowledge Base</a></li>
+                                    <li><a href="#">Career</a></li>
+                                    <li><a href="#">Press Releases</a></li>
+                                    <li><a href="#">Terms of services</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="probootstrap-footer-widget">
+                                <h3>Links</h3>
+                                <ul>
+                                    <li><a href="#">Knowledge Base</a></li>
+                                    <li><a href="#">Career</a></li>
+                                    <li><a href="#">Press Releases</a></li>
+                                    <li><a href="#">Terms of services</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="probootstrap-footer-widget">
+                                <h3>Links</h3>
+                                <ul>
+                                    <li><a href="#">Knowledge Base</a></li>
+                                    <li><a href="#">Career</a></li>
+                                    <li><a href="#">Press Releases</a></li>
+                                    <li><a href="#">Terms of services</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+            <p>© 2017 uiCookies:Stack. All Rights Reserved.
+              <br> Designed & Developed with ♥ by <a href="#">uiCookies.com</a></p>
+        </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script> AOS.init(); </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="script/custome.js"></script>
+  </body>
+</html>
